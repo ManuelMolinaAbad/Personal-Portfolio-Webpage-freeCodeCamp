@@ -1,127 +1,133 @@
-:root{
-    --color-fondo-navbar: #e0fbfc;
-    --color-letra-navbar: #fc4f4f;
-    --color-fondo-principal: #3d5a80;
-    --color-letra-principal: #ee6c4d;
-    --color-fondo-projectos: #98c1d9;
+:root {
+  --color-fondo-navbar: #e0fbfc;
+  --color-letra-navbar: #fc4f4f;
+  --color-fondo-principal: #3d5a80;
+  --color-letra-principal: #ee6c4d;
+  --color-fondo-projectos: #98c1d9;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-letra-principal);
+  min-width: 300px;
+}
+
+#navbar {
+  background: var(--color-fondo-navbar);
+  display: flex;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: var(--color-letra-navbar);
+  padding: 15px 20px 10px;
+  display: block;
+}
+
+#main {
+  margin-top: 50px;
+}
+
+#welcome-section {
+  background: var(--color-fondo-principal);
+}
+
+h1,
+.bio {
+  text-align: center;
+  padding: 10px;
+}
+
+hr,
+.bio {
+  width: 90%;
+  margin: auto;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact a {
+  text-decoration: none;
+  padding: 30px;
+}
+
+i {
+  color: var(--color-letra-principal);
+}
+
+#projects {
+  background: var(--color-fondo-projectos);
+}
+
+.projects-heading {
+  text-align: center;
+  padding: 20px;
+}
+
+#projects-tile {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 30px;
+  width: 90%;
+  margin: auto;
+}
+
+.project-tile {
+  background: var(--color-fondo-principal);
+  color: var(--color-letra-pricipal);
+  margin-bottom: 25px;
+}
+
+.project-tile img {
+  height: 300px;
+  width: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+
+.project-tile p {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+@media only screen and (max-width: 400px) {
+  #projects-tile {
+    grid-template-columns: auto;
   }
-  
-  *, *::after, *::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+  i {
+    display: none;
   }
-  
-  html{
-   scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    display: none;
   }
-  
-  body{
-    font-family: Verdana, sans-serif;
-    font-size: 100%;
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--color-letra-principal);
-    min-width: 300px;
-  }
-  
-  #navbar{
-    background: var(--color-fondo-navbar);
-    display: flex;
-    justify-content: flex-start;
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-  }
-  
-  ul{
-    display: flex;
-    list-style: none;
-  }
-  
-  #navbar a{
-    text-decoration: none;
-    color: var(--color-letra-navbar);
-    padding: 15px 20px 10px;
-    display: block;
-  }
-  
-  #main{
-    margin-top: 50px;
-  }
-  
-  #welcome-section{
-    background: var(--color-fondo-principal);
-  }
-  
-  h1, .bio{
-    text-align: center;
-    padding: 10px; 
-  }
-  
-  hr, .bio{
-    width: 90%;
-    margin: auto;
-  }
-  
-  .contact{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .contact a{
-    text-decoration: none;
-    padding: 30px;
-  }
-  
-  i{
-   color: var(--color-letra-principal);
-  }
-  
-  #projects{
-    background: var(--color-fondo-projectos);
-  }
-  
-  .projects-heading{
-    text-align: center;
-    padding: 20px;
-  }
-  
-  #projects-tile{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 30px;
-    width: 90%;
-    margin: auto;
-  }
-  
-  .project-tile{
-    background: var(--color-fondo-principal);
-    color: var(--color-letra-pricipal);
-    margin-bottom: 25px;
-  }
-  
-  .project-tile img{
-    height: 300px;
-    width: 100%;
-    margin: auto;
-    object-fit: cover;
-  }
-  
-  .project-tile p{
-    text-align: center;
-    padding: 10px 20px;
-  }
-  
-  @media only screen and (max-width: 400px){
-    #projects-tile{
-      grid-template-columns: auto;
-    }
-    i{
-      display: none;
-    }
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  }
+}
